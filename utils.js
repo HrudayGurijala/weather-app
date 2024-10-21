@@ -1,7 +1,7 @@
 const request = require("request");
 
-const getWeather = (location, callback) => {
-  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=K845FL7QJF7W6BTLRPHQ8L6SH`;
+const getWeather = (location,key, callback) => {
+  const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${key}`;
 
   request(url, (error, response) => {
     if (error) {
